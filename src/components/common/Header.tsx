@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Header() {
     return (
-        <header className="sticky top-0 z-50 bg-[var(--color-background-dark)] border-b border-[var(--color-border)]">
+        <header className="sticky top-0 z-50 bg-[var(--color-background-dark)] border-b border-[var(--color-border)] text-[var(--color-text-light)]">
             <Container>
                 <div className="flex h-24 items-center justify-between">
 
