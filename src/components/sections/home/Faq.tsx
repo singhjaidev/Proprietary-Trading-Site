@@ -122,7 +122,7 @@ const faqs = [
 export default function Faq() {
     const [openIndex, setOpenIndex] = useState(0);
     return (
-        <Section>
+        <Section overflowHidden={false}>
 
             <Container>
 
@@ -130,8 +130,7 @@ export default function Faq() {
 
                     {/* LEFT */}
 
-                    <div className="lg:sticky top-32 h-fit">
-
+                    <div className="lg:sticky top-48 h-fit">
                         <SectionTitle
                             badge="Frequently Asked Questions"
                             title={

@@ -6,18 +6,20 @@ type Props = {
   className?: string;
   pt?: string;
   pb?: string;
+  overflowHidden?: boolean;
 };
 
 export default function Section({
   children,
   className,
   pt = "pt-24",
-  pb = "pb-24",
+  pb = "pb-24", overflowHidden = true,
 }: Props) {
   return (
     <section
       className={cn(
-        "relative overflow-hidden bg-[var(--color-background)]",
+        "relative",
+        overflowHidden && "overflow-hidden",
         pt,
         pb,
         className
