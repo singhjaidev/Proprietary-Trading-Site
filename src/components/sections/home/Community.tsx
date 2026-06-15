@@ -4,7 +4,6 @@ import Card from "@/components/common/Card";
 
 import SectionTitle from "@/components/ui/SectionTitle";
 import Heading from "@/components/ui/Heading";
-import Text from "@/components/ui/Text";
 import Feature from "@/components/ui/Feature";
 
 import {

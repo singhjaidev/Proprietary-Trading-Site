@@ -3,6 +3,7 @@ export const colors = {
     primary: "text-[var(--color-text)]",
     secondary: "text-[var(--color-text-secondary)]",
     light: "text-[var(--color-text-light)]",
+    lightDesc: "text-[var(--color-text-light-desc)]",
     white: "text-white",
     primaryBrand: "text-[var(--color-primary)]",
     danger: "text-red-500",

@@ -4,9 +4,10 @@ import { typography } from "@/styles/typography";
 
 type Props = {
   children: React.ReactNode;
+  variant?: "light" | "dark";
 };
 
-export default function Badge({ children }: Props) {
+export default function Badge({ children, variant = "light", }: Props) {
   return (
     <div
       className={cn(
@@ -15,14 +16,17 @@ export default function Badge({ children }: Props) {
     >
       <div className={cn(
         colors.bg.primary,
-        "w-10 h-[2px]"
+        variant === "light"
+          ? "w-14 h-[2px]"
+          : "w-14 h-[1px]"
       )}
       />
 
       <span
         className={cn(
           typography.label,
-          colors.text.primaryBrand
+          colors.text.primaryBrand,
+          variant === "light" && "font-medium"
         )}
       >
         {children}
