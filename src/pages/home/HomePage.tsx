@@ -10,14 +10,16 @@ export default function HomePage() {
     return (
         <>
             <Hero />
-
+            <Giveaway />
+            <Referral />
+<Community />
             <HowItWorks />
 
-            <Community />
+            
 
-            <Referral />
+            
 
-            <Giveaway />
+            
 
             <Difference />
 
