@@ -39,7 +39,7 @@ export default function FaqItem({
 
         <ChevronDown
           className={cn(
-            "shrink-0 transition duration-300",
+            "shrink-0 transition duration-300 ",
             isOpen && "rotate-180"
           )}
         />
@@ -49,7 +49,7 @@ export default function FaqItem({
         className={cn(
           "grid transition-all duration-300",
           isOpen
-            ? "grid-rows-[1fr] mt-5"
+            ? "grid-rows-[1fr] mt-6"
             : "grid-rows-[0fr]"
         )}
       >
