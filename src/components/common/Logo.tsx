@@ -8,8 +8,8 @@ export default function Logo() {
       <Image
         src="/Logo.jpg"
         alt={siteConfig.name}
-        width={70}
-        height={70}
+        width={120}
+        height={120}
         priority
         className="object-contain"
       />

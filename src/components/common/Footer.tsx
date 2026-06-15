@@ -1,10 +1,15 @@
 import Link from "next/link";
+
 import Container from "./Container";
 import Logo from "./Logo";
 
 import Heading from "../ui/Heading";
 import Text from "../ui/Text";
+
+import { navigation } from "@/constants/navigation";
 import { siteConfig } from "@/constants/site";
+
+import { componentStyles } from "@/styles/components";
 
 export default function Footer() {
   return (
@@ -18,8 +23,7 @@ export default function Footer() {
             <Logo />
 
             <Text className="mt-6 max-w-sm">
-              Built by traders with over $250,000 in prop firm payouts.
-              Fair rules, transparent operations, and payouts you can trust.
+              {siteConfig.description}
             </Text>
           </div>
 
@@ -30,29 +34,19 @@ export default function Footer() {
             </Heading>
 
             <div className="mt-6 flex flex-col gap-4">
-              <FooterLink href="/">
-                Home
-              </FooterLink>
-
-              <FooterLink href="/about">
-                About
-              </FooterLink>
-
-              <FooterLink href="/funding-programs">
-                Funding Programs
-              </FooterLink>
-
-              <FooterLink href="/giveaway">
-                Giveaway
-              </FooterLink>
-
-              <FooterLink href="/faq">
-                FAQ
-              </FooterLink>
-
-              <FooterLink href="/contact">
-                Contact
-              </FooterLink>
+              {navigation
+                .filter((item) =>
+                  item.sections.includes("footer")
+                )
+                .map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className={componentStyles.footerLink}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
             </div>
           </div>
 
@@ -63,17 +57,19 @@ export default function Footer() {
             </Heading>
 
             <div className="mt-6 flex flex-col gap-4">
-              <FooterLink href="/terms">
-                Terms & Conditions
-              </FooterLink>
-
-              <FooterLink href="/privacy-policy">
-                Privacy Policy
-              </FooterLink>
-
-              <FooterLink href="/risk-disclaimer">
-                Risk Disclaimer
-              </FooterLink>
+              {navigation
+                .filter((item) =>
+                  item.sections.includes("legal")
+                )
+                .map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className={componentStyles.footerLink}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
             </div>
           </div>
 
@@ -83,7 +79,7 @@ export default function Footer() {
               Contact
             </Heading>
 
-            <div className="mt-6 flex flex-col gap-4">
+            <div className="mt-6 space-y-4">
               <Text>
                 {siteConfig.email}
               </Text>
@@ -96,42 +92,21 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Row */}
+        {/* Bottom */}
         <div className="flex flex-col gap-4 border-t border-[var(--color-border)] py-8 md:flex-row md:items-center md:justify-between">
 
           <Text size="small">
-            © {new Date().getFullYear()} My Trading Capital.
+            © {new Date().getFullYear()} {siteConfig.name}.
             All rights reserved.
           </Text>
 
           <Text size="small">
-            Built by Traders. Defined by Transparency.
+            {siteConfig.title}
           </Text>
 
         </div>
 
       </Container>
     </footer>
-  );
-}
-
-function FooterLink({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <Link
-      href={href}
-      className="
-        text-[var(--color-text-secondary)]
-        transition-colors
-        hover:text-[var(--color-primary)]
-      "
-    >
-      {children}
-    </Link>
   );
 }

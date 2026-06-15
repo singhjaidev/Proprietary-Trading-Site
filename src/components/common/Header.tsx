@@ -26,15 +26,17 @@ export default function Header() {
 
                     {/* Navigation */}
                     <nav className="hidden lg:flex items-center gap-14">
-                        {navigation.map((item) => (
-                            <Link
-                                key={item.label}
-                                href={item.href}
-                                className={componentStyles.navLink}
-                            >
-                                {item.label}
-                            </Link>
-                        ))}
+                        {navigation
+                            .filter(item => item.sections.includes("header"))
+                            .map(item => (
+                                <Link
+                                    key={item.label}
+                                    href={item.href}
+                                    className={componentStyles.navLink}
+                                >
+                                    {item.label}
+                                </Link>
+                            ))}
                     </nav>
 
                     {/* Actions */}
