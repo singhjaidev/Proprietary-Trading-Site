@@ -13,7 +13,7 @@ export const typography = {
 
   small: "text-sm leading-relaxed",
 
-  label: "text-sm font-medium uppercase tracking-wider",
+  label: "text-sm uppercase tracking-[0.25em]",
 
   button: "text-base font-semibold",
 };

@@ -6,7 +6,7 @@ type Props = {
   children: React.ReactNode;
   className?: string;
   size?: "body" | "bodyLg" | "small";
-  color?: "primary" | "secondary" | "danger";
+  color?: "primary" | "secondary" | "danger" | "lightDesc" | "light";
 };
 
 export default function Text({
