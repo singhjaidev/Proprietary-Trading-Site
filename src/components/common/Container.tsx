@@ -1,3 +1,6 @@
+import { cn } from "@/lib/cn";
+import { spacing } from "@/styles/spacing";
+
 type ContainerProps = {
   children: React.ReactNode;
   className?: string;
@@ -5,14 +8,15 @@ type ContainerProps = {
 
 export default function Container({
   children,
-  className = "",
+  className,
 }: ContainerProps) {
   return (
     <div
-      className={`mx-auto px-6 ${className}`}
-      style={{
-        maxWidth: "var(--container-width)",
-      }}
+      className={cn(
+        "mx-auto px-6", 
+        spacing.container,
+        className
+      )}
     >
       {children}
     </div>

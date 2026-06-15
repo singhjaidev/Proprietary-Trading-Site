@@ -11,5 +11,16 @@ export const siteConfig = {
         twitter: "",
         discord: "",
         instagram: ""
-    }
+    },
+    header: {
+        login: {
+            label: "Log In",
+            href: "/login",
+        },
+
+        cta: {
+            label: "Get Started",
+            href: "/register",
+        },
+    },
 }
