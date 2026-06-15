@@ -7,6 +7,7 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import FaqItem from "@/components/ui/FaqItem";
 
 import { useState } from "react";
+
 const faqs = [
     {
         question: "When are you launching?",
