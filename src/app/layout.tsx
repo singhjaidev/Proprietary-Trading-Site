@@ -2,50 +2,16 @@ import "./globals.css";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 
-import {
-  Manrope,
-  Space_Grotesk,
-  Plus_Jakarta_Sans,
-  Sora,
-  Inter,
-} from "next/font/google";
+import { Sora } from "next/font/google";
 
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-plus-jakarta",
-});
+import LenisProvider from "@/components/providers/LenisProvider";
+import ScrollProgress from "@/components/ui/ScrollProgress";
+import ScrollToTop from "@/components/ui/ScrollToTop";
+import NoiseTexture from "@/components/background/NoiseTexture";
 
 const sora = Sora({
   subsets: ["latin"],
   variable: "--font-sora",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-import { Syne } from "next/font/google";
-
-const syne = Syne({
-  subsets: ["latin"],
-  variable: "--font-syne",
-});
-
-import { Archivo } from "next/font/google";
-const archivo = Archivo({
-  subsets: ["latin"],
-  variable: "--font-archivo",
 });
 
 export default function RootLayout({
@@ -58,20 +24,18 @@ export default function RootLayout({
       <body
         className={`
           min-h-full flex flex-col
-          ${manrope.variable}
-          ${spaceGrotesk.variable}
-          ${plusJakarta.variable}
           ${sora.variable}
-          ${syne.variable}
-          ${archivo.variable}
-          ${inter.variable}
         `}
       >
-        <Header />
+        <LenisProvider>
+          <ScrollProgress />
+          <ScrollToTop />
 
-        {children}
+          <Header />
+          {children}
+          <Footer />
 
-        <Footer />
+        </LenisProvider>
       </body>
     </html>
   );

@@ -9,7 +9,8 @@
   --color-background-dark: #000;
 
   --color-text: #0f172a;
-  --color-text-light: #fff;
+  --color-text-light: #fbfbfb;
+  --color-text-light-desc: #e2e8f0e0;
   --color-text-secondary: #64748b;
 
   --color-border: #e2e8f0;
@@ -25,13 +26,8 @@
   /* Shadows */
   --shadow-card: 0 8px 30px rgba(0, 0, 0, .08);
 
-  /* Fonts */
-  /* --font-sans: var(--font-geist-sans); */
-  /* --font-sans: var(--font-space-grotesk); */
-  /* --font-sans: var(--font-manrope); */
-  /* --font-sans: var(--font-plus-jakarta); */
+  /* Fontt */
   --font-sans: var(--font-sora);
-  /* --font-sans: var(--font-inter); */
 
 }
 
@@ -39,50 +35,10 @@
   box-sizing: border-box;
 }
 
-/* html {
-  scroll-behavior: smooth;
-} */
 
 body {
-  /* ===== TOP PICKS ===== */
 
-  /* Premium, professional */
-  /* font-family: var(--font-manrope); */
-
-  /* Energetic, modern fintech */
-  /* font-family: var(--font-space-grotesk); */
-
-  /* Elegant, expensive */
-  /* font-family: var(--font-plus-jakarta); */
-
-  /* Bold, memorable */
   font-family: var(--font-sora);
-
-  /* Safe, universally good */
-  /* font-family: var(--font-inter); */
-
-/*  */
-
-  /* Somewhat good */
-  /* font-family: var(--font-syne); */
-  /* font-family: var(--font-archivo); */
-
-  /* ===== EXTRA OPTIONS ===== */
-
-  /* Modern, clean */
-  /* font-family: var(--font-dm-sans); */
-
-  /* Premium and underrated */
-  /* font-family: var(--font-instrument-sans); */
-
-  /* Friendly and modern */
-  /* font-family: var(--font-outfit); */
-
-  /* Futuristic and sleek */
-  /* font-family: var(--font-urbanist); */
-
-  /* Default active font */
-  /* font-family: var(--font-manrope); */
 
   background: var(--color-background);
   color: var(--color-text);

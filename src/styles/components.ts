@@ -9,7 +9,7 @@ export const componentStyles = {
     "normal-case tracking-normal",
     "transition-colors hover:text-[var(--color-primary)]"
   ),
-
+  
   footerLink: cn(
     typography.body,
     colors.text.secondary,
