@@ -1,5 +1,3 @@
-import { cn } from "@/lib/cn";
-
 type Props = {
   children: React.ReactNode;
   gap?: "sm" | "md" | "lg";

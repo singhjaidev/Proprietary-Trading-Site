@@ -5,6 +5,7 @@ import Referral from "@/components/sections/home/Referral";
 import Giveaway from "@/components/sections/home/Giveaway";
 import Difference from "@/components/sections/home/Difference";
 import Faq from "@/components/sections/home/Faq";
+import FundingPrograms from "@/components/sections/home/FundingPrograms";
 
 export default function HomePage() {
     return (
@@ -12,17 +13,10 @@ export default function HomePage() {
             <Hero />
             <Giveaway />
             <Referral />
-<Community />
+            <Community />
             <HowItWorks />
-
-            
-
-            
-
-            
-
             <Difference />
-
+            <FundingPrograms />
             <Faq />
         </>
     );
